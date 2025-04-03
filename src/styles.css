@@ -10,6 +10,7 @@ body {
   background-color: #1f1f1f;
 }
 
+/* HEADER */
 header {
   position: absolute;
   width: 100%;
@@ -24,13 +25,13 @@ header {
   );
 }
 
-
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -41,11 +42,23 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 48px;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  position: relative;
+  font-weight: 400;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.dropdown {
   position: relative;
 }
 
@@ -56,6 +69,11 @@ nav a {
   list-style: none;
   padding: 8px 0;
   margin: 0;
+  top: 100%;
+  left: 0;
+  border-radius: 4px;
+  min-width: 150px;
+  z-index: 2;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -66,6 +84,62 @@ nav a {
   display: block;
   padding: 8px 16px;
   color: white;
+}
+
+/* BOTÓN HAMBURGUESA */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 64px;
+    right: 16px;
+    background: #1f1f1f;
+    padding: 16px;
+    flex-direction: column;
+    border-radius: 8px;
+    z-index: 2;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  nav ul.show .dropdown-menu {
+    display: flex !important;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  nav li {
+    margin: 8px 0;
+  }
+}
+
+
+.logo {
+  height: 70px;
 }
 
 #mensaje-btn {
