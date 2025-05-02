@@ -63,30 +63,43 @@ nav a:hover {
 }
 
 .dropdown-menu {
-  display: none;
   position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
   background: rgba(0, 0, 0, 0.8);
   list-style: none;
   padding: 8px 0;
   margin: 0;
-  top: 100%;
-  left: 0;
   border-radius: 4px;
   min-width: 150px;
   z-index: 2;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .dropdown-menu li a {
   display: block;
   padding: 8px 16px;
   color: white;
+  text-decoration: none;
 }
 
-/* BOTÓN HAMBURGUESA */
+.dropdown-menu li a:hover {
+  text-decoration: underline;
+}
+
 #menu-toggle {
   display: none;
   background: none;
@@ -97,49 +110,73 @@ nav a:hover {
   z-index: 3;
 }
 
-/* RESPONSIVE MENU */
 @media (max-width: 768px) {
   nav ul {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
     position: absolute;
     top: 64px;
     right: 16px;
     background: #1f1f1f;
-    padding: 16px;
+    padding: 0;
     flex-direction: column;
     border-radius: 8px;
     z-index: 2;
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
   }
 
   nav ul.show {
-    display: flex;
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    padding: 16px;
   }
 
   #menu-toggle {
     display: block;
   }
 
-  .dropdown-menu {
-    position: static;
-    background: none;
-    padding: 0;
-    border-radius: 0;
-  }
-
   nav ul.show .dropdown-menu {
-    display: flex !important;
+    position: static;
+    opacity: 1;
+    max-height: none;
+    transform: none;
+    visibility: visible;
+    pointer-events: auto;
+    display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
+    padding-left: 16px;
+    background: none;
   }
 
   nav li {
     margin: 8px 0;
   }
+
+  nav li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  nav li a:hover {
+    text-decoration: underline;
+  }
 }
+
 
 
 .logo {
   height: 70px;
+  transition: transform 0.8s ease-in-out;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
 }
 
 #mensaje-btn {
@@ -354,6 +391,17 @@ a:hover {
 .detalle-enlaces a:hover {
   text-decoration: underline;
   text-decoration-color: #f0c674;
+}
+
+.detalle-pasos p {
+  transition: transform 0.3s ease;
+}
+.detalle-pasos p:hover {
+  transform: scale(1.02);
+}
+
+.clip-art {
+  clip-path: polygon(0 0, 100% 10%, 90% 100%, 10% 90%);
 }
 
 

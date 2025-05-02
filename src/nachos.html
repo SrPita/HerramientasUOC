@@ -11,12 +11,12 @@
     <header>
       <div class="header-container">
         <a href="./index.html">
-          <img src="./assets/logo.png" alt="Logo Recetas Mexicanas" class="logo" />
+          <img src="./assets/logo.svg" alt="Logo Recetas Mexicanas" class="logo" />
         </a>
         <nav>
           <ul>
             <li class="dropdown">
-              <a href="#">Recetas</a>
+              <a href="./recetas.html">Recetas</a>
               <ul class="dropdown-menu">
                 <li><a href="./tacos.html">Tacos</a></li>
                 <li><a href="./guacamole.html">Guacamole</a></li>
@@ -29,71 +29,79 @@
         <button id="menu-toggle" aria-label="Abrir menú">☰</button>
       </div>
     </header>
-
+  
     <div class="detalle-banner-full">
-      <img src="./assets/nachos.jpg" alt="Nachos con queso y guarniciones" />
+      <picture>
+        <source srcset="./assets/nachos.jpg?as=webp&width=600" media="(max-width: 600px)" type="image/webp" />
+        <source srcset="./assets/nachos.jpg?as=webp" type="image/webp" />
+        <img src="./assets/nachos.jpg" alt="Nachos recién hechos con guacamole y queso fundido" />
+      </picture>
     </div>
-
+  
     <main class="detalle-container">
-      <h1>Receta de Nachos Mexicanos</h1>
-
+      <h1>Receta de Nachos Caseros</h1>
+  
       <section class="detalle-ingredientes">
         <h2>Ingredientes</h2>
         <ul>
-          <li>200g de totopos (nachos)</li>
+          <li>1 bolsa de totopos o nachos</li>
           <li>150g de queso cheddar rallado</li>
-          <li>1 tomate pequeño</li>
-          <li>1 jalapeño</li>
-          <li>Crema agria</li>
-          <li>Guacamole</li>
+          <li>1 tomate maduro</li>
+          <li>1 jalapeño en rodajas</li>
+          <li>1 cucharada de crema agria</li>
+          <li>Guacamole al gusto</li>
+          <li>Cilantro fresco</li>
         </ul>
       </section>
-
+  
       <section class="detalle-pasos">
         <h2>Preparación paso a paso</h2>
-
+  
         <div class="paso">
-          <img src="./assets/nachos1.jpg" alt="Ingredientes para nachos con queso" />
-          <p>Paso 1 - Preparar los ingredientes: Reúne los totopos en un recipiente amplio. Lava y pica el tomate en cubos pequeños, rebana el jalapeño en rodajas finas y asegúrate de tener lista la crema agria, el guacamole y el queso rallado para montar los nachos al horno.</p>
+          <picture>
+            <source media="(max-width: 600px)" srcset="./assets/nachos1-mobile.jpg?as=webp">
+            <source media="(min-width: 601px)" srcset="./assets/nachos1.jpg?as=webp">
+            <img src="./assets/taco1.jpg" alt="Preparación casera de tortillas de maíz" />
+          </picture>
+          <p>Paso 1 - Preparar los ingredientes: Pica finamente el tomate y corta el jalapeño en rodajas. Ralla el queso si no lo tienes preparado. Prepara el guacamole con aguacate maduro, sal, zumo de limón y cebolla picada.</p>
         </div>
-
+  
         <div class="paso">
-          <img src="./assets/nachos2.jpg" alt="Queso fundido sobre los nachos" />
-          <p>Paso 2 - Montar y hornear: En una bandeja para horno, coloca una capa de totopos, añade queso rallado por encima, luego otra capa de totopos y más queso. Hornea durante 5-7 minutos a 180°C o hasta que el queso se derrita por completo.</p>
+          <picture>
+            <source srcset="./assets/nachos2.jpg?as=webp" type="image/webp" />
+            <img src="./assets/nachos2.jpg" alt="Nachos en bandeja listos para gratinar" class="clip-art" />
+          </picture>
+          <p>Paso 2 - Montar la bandeja: Coloca los nachos en una bandeja para horno. Reparte el queso rallado por encima junto con el tomate y las rodajas de jalapeño. Gratina en horno precalentado a 180°C durante 5-7 minutos, hasta que el queso esté fundido.</p>
         </div>
-
+  
         <div class="paso">
-          <img src="./assets/nachos3.jpg" alt="Nachos servidos con guarniciones" />
-          <p>Paso 3 - Servir con guarniciones: Saca los nachos del horno y añade el tomate picado, jalapeños, guacamole y crema agria al gusto. Sirve caliente en una bandeja o plato grande y disfruta acompañado de una bebida fresca.</p>
+          <picture>
+            <source srcset="./assets/nachos3.jpg?as=webp" type="image/webp" />
+            <img src="./assets/nachos3.jpg" alt="Nachos servidos con crema agria y guacamole" />
+          </picture>
+          <p>Paso 3 - Servir: Sirve los nachos calientes y añade por encima cucharadas de crema agria, guacamole y cilantro picado. Disfrútalos acompañados de una bebida fresca o como entrante para compartir.</p>
         </div>
       </section>
-
+  
       <section class="detalle-video">
         <h2>Vídeo de la receta</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/VhgJWeiJnYA"
-          title="Nachos con queso - Receta fácil"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VhgJWeiJnYA" title="Video receta nachos" frameborder="0" allowfullscreen></iframe>
       </section>
-      
-
+  
       <section class="detalle-enlaces">
         <h2>Enlaces relacionados</h2>
         <ul>
-          <li><a href="https://es.wikipedia.org/wiki/Nachos" target="_blank">Historia de los nachos - Wikipedia</a></li>
+          <li><a href="https://es.wikipedia.org/wiki/Nacho_(comida)" target="_blank">Historia de los nachos - Wikipedia</a></li>
           <li><a href="./enlaces.html">Atribuciones y fuentes</a></li>
         </ul>
       </section>
     </main>
-
+  
     <footer>
       <p>© 2025 Recetas Mexicanas</p>
     </footer>
-
+  
     <script type="module" src="./index.js"></script>
   </body>
+  
 </html>

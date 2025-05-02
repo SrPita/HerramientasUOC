@@ -9,36 +9,40 @@
   </head>
   <body class="detalle-page">
     <header>
-        <div class="header-container">
-          <a href="./index.html">
-            <img src="./assets/logo.png" alt="Logo Recetas Mexicanas" class="logo" />
-          </a>
-          <nav>
-            <ul>
-              <li class="dropdown">
-                <a href="./recetas.html">Recetas</a>
-                <ul class="dropdown-menu">
-                  <li><a href="./tacos.html">Tacos</a></li>
-                  <li><a href="./guacamole.html">Guacamole</a></li>
-                  <li><a href="./nachos.html">Nachos</a></li>
-                </ul>
-              </li>
-              <li><a href="./enlaces.html">Enlaces</a></li>
-            </ul>
-          </nav>
-          <button id="menu-toggle" aria-label="Abrir menú">
-            ☰
-          </button>
-        </div>
-      </header>
-
+      <div class="header-container">
+        <a href="./index.html">
+          <img src="./assets/logo.svg" alt="Logo Recetas Mexicanas" class="logo" />
+        </a>
+        <nav>
+          <ul>
+            <li class="dropdown">
+              <a href="./recetas.html">Recetas</a>
+              <ul class="dropdown-menu">
+                <li><a href="./tacos.html">Tacos</a></li>
+                <li><a href="./guacamole.html">Guacamole</a></li>
+                <li><a href="./nachos.html">Nachos</a></li>
+              </ul>
+            </li>
+            <li><a href="./enlaces.html">Enlaces</a></li>
+          </ul>
+        </nav>
+        <button id="menu-toggle" aria-label="Abrir menú">
+          ☰
+        </button>
+      </div>
+    </header>
+  
     <div class="detalle-banner-full">
-      <img src="./assets/tacos.jpg" alt="Tacos Mexicanos" />
+      <picture>
+        <source srcset="./assets/tacos.jpg?as=webp&width=600" media="(max-width: 600px)" type="image/webp" />
+        <source srcset="./assets/tacos.jpg?as=webp" type="image/webp" />
+        <img src="./assets/tacos.jpg" alt="Tacos mexicanos sobre tabla de madera" />
+      </picture>
     </div>
-
+  
     <main class="detalle-container">
       <h1>Receta de Tacos Mexicanos</h1>
-
+  
       <section class="detalle-ingredientes">
         <h2>Ingredientes</h2>
         <ul>
@@ -52,31 +56,40 @@
           <li>Aceite de oliva</li>
         </ul>
       </section>
-
+  
       <section class="detalle-pasos">
         <h2>Preparación paso a paso</h2>
-
+  
         <div class="paso">
-          <img src="./assets/taco1.jpg" alt="Preparación de tortillas" />
+          <picture>
+            <source srcset="./assets/taco1.jpg?as=webp" type="image/webp" />
+            <img src="./assets/taco1.jpg" alt="Preparación casera de tortillas de maíz" />
+          </picture>
           <p>Paso 1 - Preparar las tortillas: Si no tienes tortillas ya hechas, mezcla harina de maíz con agua y una pizca de sal. Amasa hasta obtener una textura suave. Divide la masa en bolitas y aplástalas para dar forma a las tortillas. Cocina cada una en un comal o sartén caliente durante 1 minuto por cada lado hasta que estén cocidas y flexibles.</p>
         </div>
-
+  
         <div class="paso">
-          <img src="./assets/taco2.jpg" alt="Preparando el relleno" />
+          <picture>
+            <source srcset="./assets/taco2.jpg?as=webp" type="image/webp" />
+            <img src="./assets/taco2.jpg" alt="Cocinando carne sazonada para los tacos" class="clip-art" />
+          </picture>
           <p>Paso 2 - Cocinar el relleno: Corta la carne en tiras finas. En una sartén con un poco de aceite de oliva, cocina la carne a fuego medio-alto. Añade sal, pimienta y especias al gusto (puede ser orégano, comino o pimentón). Cocina hasta que la carne esté dorada y jugosa. Mientras tanto, pica la cebolla y el cilantro para tenerlos listos.</p>
         </div>
-
+  
         <div class="paso">
-          <img src="./assets/taco3.jpg" alt="Disfrutando los tacos" />
+          <picture>
+            <source srcset="./assets/taco3.jpg?as=webp" type="image/webp" />
+            <img src="./assets/taco3.jpg" alt="Persona disfrutando tacos en compañía" />
+          </picture>
           <p>Paso 3 - Montar y disfrutar: Calienta las tortillas un momento en la sartén para que estén flexibles. Coloca un poco de carne en el centro de cada tortilla, añade cebolla y cilantro picados y un chorrito de salsa picante. Exprime un poco de limón encima y acompaña con amigos o familia para disfrutar al máximo.</p>
         </div>
       </section>
-
+  
       <section class="detalle-video">
         <h2>Vídeo de la receta</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/TK6s_JDC29I" title="Video receta tacos" frameborder="0" allowfullscreen></iframe>
       </section>
-
+  
       <section class="detalle-enlaces">
         <h2>Enlaces relacionados</h2>
         <ul>
@@ -85,11 +98,11 @@
         </ul>
       </section>
     </main>
-
+  
     <footer>
       <p>© 2025 Recetas Mexicanas</p>
     </footer>
-
+  
     <script type="module" src="./index.js"></script>
-  </body>
+  </body>  
 </html>
